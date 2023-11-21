@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navbar and Form Example</title>
+</head>
+<body>
+
+  <div class="form-container">
+    <form action="#" class="custom-form">
+
+      <label for="schemeTitle">Scheme Title:</label>
+      <input type="text" id="schemeTitle" [(ngModel)]="schemeTitle" name="schemeTitle"><br><br>
+
+      <label for="schemeFund">Scheme Fund:</label>
+      <input type="number" id="schemeFund" [(ngModel)]="schemeFund" name="schemeFund" value="0"><br><br>
+
+      <label for="schemeDescription">Scheme Description:</label>
+      <textarea id="schemeDescription" [(ngModel)]="schemeDescription" name="schemeDescription"></textarea><br><br>
+
+      <label for="requiredDocs">Required Documents:</label><br>
+      <div class="checkbox-group">
+        <input type="checkbox" id="adharCard" [(ngModel)]="adharCard" name="adharCard" value="AdharCard">
+        <label for="adharCard">Adhar Card</label><br>
+      
+        <input type="checkbox" id="panCard" [(ngModel)]="pancard" name="pancard" value="PanCard">
+        <label for="panCard">Pan Card</label><br>
+      
+        <input type="checkbox" id="landDocuments" [(ngModel)]="landDocument" name="landDocument" value="LandDocument">
+        <label for="landDocuments">Land Documents</label><br>
+      </div>
+
+      <br>
+
+
+      <input type="submit"  (click)="onSubmit()" value="Submit">
+    </form>
+  </div>
+
+
+</body>
+</html>
